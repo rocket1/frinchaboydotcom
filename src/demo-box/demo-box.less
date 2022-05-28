@@ -1,0 +1,81 @@
+@import "../ui/mixins";
+@import "../ui/variables";
+
+.demo-box {
+
+  @w: @box-width;
+  @h: @box-height;
+
+  display: flex;
+  flex-direction: column;
+
+  width: @w;
+  height: @h;
+
+  .info-div {
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    color: white;
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      //font-family: sans-serif;
+      font-size: .9rem;
+      line-height: 1.4;
+    }
+
+    .url {
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .demo-img {
+    width: @w;
+    height: 240px;
+    @bgSize: cover;
+    .bg-size(@bgSize);
+    background-position-y: top;
+  }
+
+  &.no-info {
+    .demo-img {
+      height: @h;
+    }
+  }
+
+  will-change: transform, opacity;
+
+  &:hover {
+
+    cursor: pointer;
+    transform: scale(1.14);
+    z-index: 2;
+    @t: .2s;
+    -webkit-transition-duration: @t; /* Safari */
+    transition-duration: @t;
+    // !!!!! Crazy ass property helps chrome with the animations... maybe!! Works great in Safari :P :P :P
+    will-change: transform, opacity;
+
+
+    @media @mobile-small {
+      cursor: default;
+      transform: scale(1);
+      z-index: 1;
+      @t: 0;
+      -webkit-transition-duration: @t; /* Safari */
+      transition-duration: @t;
+      // !!!!! Crazy ass property helps chrome with the animations... maybe!! Works great in Safari :P :P :P
+      will-change: 0;
+    }
+  }
+}
