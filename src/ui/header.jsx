@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import CSSModules from 'css-modules';
 import styles from './header.less';
 import Links from './links';
 
@@ -15,9 +14,9 @@ class Header extends Component {
         // -webkit-filter: blur(5px);
 
         return (
-            <div styleName="header">
-                <div styleName="hero">
-                    <div styleName="hero-text">
+            <div className={styles['header']}>
+                <div className={styles['hero']}>
+                    <div className={styles['hero-text']}>
                         <h1>Jason Frinchaboy</h1>
                         <h2>Greatest Hits</h2>
                     </div>
@@ -28,6 +27,6 @@ class Header extends Component {
     }
 }
 
-export default CSSModules(Header, styles);
+export default Header;
 
 

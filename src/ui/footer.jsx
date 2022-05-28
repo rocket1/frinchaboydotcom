@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import CSSModules from 'css-modules';
 import cx from  'classnames';
 import styles from './footer.less';
 import ScrollManager from 'window-scroll-manager'
@@ -115,12 +114,12 @@ class Footer extends Component {
         });
 
         // return (
-        //     <div styleName="footer" style={blurStyle}>
+        //     <div className="footer" style={blurStyle}>
         //         <Links/>
         //     </div>
         // )
 
-        // <img styleName="react-logo" src="img/react.svg"/>
+        // <img className="react-logo" src="img/react.svg"/>
 
         return (
             <div className={className}>
@@ -130,6 +129,6 @@ class Footer extends Component {
     }
 }
 
-export default CSSModules(Footer, styles);
+export default Footer;
 
 

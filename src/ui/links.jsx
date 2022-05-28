@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import CSSModules from 'css-modules';
 import styles from './links.less';
 
 class Links extends Component {
@@ -10,7 +9,7 @@ class Links extends Component {
      */
     render() {
         return (
-            <div styleName="links">
+            <div className={styles['links']}>
                 <a target="_blank" href="/jason-frinchaboy-resume.pdf">R‌ésum‌é</a>
                 <a target="_blank" href="https://github.com/rocket1/frinchaboy-demo">Source</a>
                 <a target="_blank" href="https://github.com/rocket1">Github</a>
@@ -21,6 +20,6 @@ class Links extends Component {
     }
 }
 
-export default CSSModules(Links, styles);
+export default Links;
 
 

@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import CSSModules from 'css-modules';
-import { BrowserRouter, Route } from 'react-router-dom';
 import DemoGrid from '../demo-grid/demo-grid';
 import DemoModal from '../demo-modal/demo-modal';
 import Header from '../ui/header';
 import Footer from '../ui/footer';
 import styles from './app.less';
 import cx from 'classnames';
-// import keydown from 'react-keydown';
 import WebFont from 'webfontloader';
 
 class App extends Component {
@@ -92,32 +89,27 @@ class App extends Component {
 
     const ready = this.state.contentReady && this.state.fontReady;
 
-    const bodyClassName = cx(styles['app-body'], {
+    const bodyCx = cx(styles['app-body'], {
       [styles.show]: ready
     });
 
     return (
-      <BrowserRouter>
-        <Route exact path="/">
-          <React.Fragment>
-            <Footer ready={ready} />
-            <DemoModal project={this.state.project} closeFunc={this.closeModal}
-                       bgColor={this.state.modalBgColor} />
-            <div className={bodyClassName}>
-              <Header />
-              <div styleName="content">
-                <div styleName="content-inner">
-                  <DemoGrid ready={ready} demoBoxClick={this.openModal} />
-                </div>
-              </div>
+      <React.Fragment>
+        <Footer ready={ready} />
+        <DemoModal project={this.state.project} closeFunc={this.closeModal} bgColor={this.state.modalBgColor} />
+        <div className={bodyCx}>
+          <Header />
+          <div className={styles['content']}>
+            <div className={styles['content-inner']}>
+              <DemoGrid ready={ready} demoBoxClick={this.openModal} />
             </div>
-          </React.Fragment>
-        </Route>
-      </BrowserRouter>
+          </div>
+        </div>
+      </React.Fragment>
     )
   }
 }
 
-export default CSSModules(App, styles);
+export default App;
 
 

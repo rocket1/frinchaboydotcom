@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import CSSModules from 'css-modules';
-import PropTypes from 'prop-types';
 import styles from './demo-modal.less';
 import cx from "classnames";
 // import Close from 'react-material-icons/icons/navigation/close';
@@ -65,7 +63,7 @@ class DemoModal extends Component {
       const github = project.github ? project.github : '';
 
       const url = project.url ? (
-        <div styleName="url">
+        <div className="url">
           <a target="_blank" href={project.url} onClick={(e) => {
             e.stopPropagation();
           }}>{project.urlText ? project.urlText : project.url}</a>
@@ -80,16 +78,16 @@ class DemoModal extends Component {
       this._lockScroll();
 
       const screenshots = project.screenshots.map((src, index) => {
-        return <div key={index} styleName="screenshot"><FadeImage src={src} /></div>
+        return <div key={index} className="screenshot"><FadeImage src={src} /></div>
       });
 
       let content = (
         <div className="content">
           {url}
-          <div styleName="verbose">{project.verbose ? project.verbose : project.description}</div>
-          <div styleName="tech">{tech} {project.github && <span>(<a target="_blank" href={github}>source</a>)</span>}</div>
+          <div className="verbose">{project.verbose ? project.verbose : project.description}</div>
+          <div className="tech">{tech} {project.github && <span>(<a target="_blank" href={github}>source</a>)</span>}</div>
 
-          <Masonry options={masonryOptions} styleName="screenshots">{screenshots}</Masonry>
+          <Masonry options={masonryOptions} className="screenshots">{screenshots}</Masonry>
         </div>
       );
 
@@ -105,9 +103,9 @@ class DemoModal extends Component {
       return (
 
         <div className={className} style={{ backgroundColor: bgColor }}>
-          <div styleName="modal-wrapper">
-            <div styleName="toolbar-wrapper">
-              <div styleName="toolbar">
+          <div className="modal-wrapper">
+            <div className="toolbar-wrapper">
+              <div className="toolbar">
                 <h2>{title}</h2>
                 <a onClick={(e) => this.closeModal(e)} href="">
                   {/*<Close />*/}
@@ -115,7 +113,7 @@ class DemoModal extends Component {
                 </a>
               </div>
             </div>
-            <div styleName="body">
+            <div className="body">
               {content}
             </div>
           </div>
@@ -129,10 +127,4 @@ class DemoModal extends Component {
   }
 }
 
-DemoModal.propTypes = {
-  project: PropTypes.object,
-  closeFunc: PropTypes.func,
-  bgColor: PropTypes.string
-};
-
-export default CSSModules(DemoModal, styles);
+export default DemoModal;

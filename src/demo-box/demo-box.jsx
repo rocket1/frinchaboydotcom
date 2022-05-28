@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import cx from 'classnames';
-import CSSModules from 'css-modules';
 import styled from 'styled-components'
 import styles from './demo-box.less';
 
@@ -26,16 +25,16 @@ class DemoBox extends PureComponent {
         `;
 
     const url = project.url ? (
-      <div styleName="url">
+      <div className={styles['url']}>
         <a target="_blank" href={project.url} onClick={(e) => {
           e.stopPropagation();
         }}>{project.urlText ? project.urlText : project.url}</a>
       </div>
     ) : null;
 
-    const infoDiv = project.title ? (<InfoDiv styleName="info-div">
-      <div styleName="title">{project.title}</div>
-      <div styleName="description"><div>{project.description}</div>{url}</div>
+    const infoDiv = project.title ? (<InfoDiv className={styles['info-div']}>
+      <div className={styles['title']}>{project.title}</div>
+      <div className={styles['description']}><div>{project.description}</div>{url}</div>
     </InfoDiv>) : null;
 
     const className = cx([[styles['demo-box']], {
@@ -44,7 +43,7 @@ class DemoBox extends PureComponent {
 
     this.StyledDemoBox = (
       <div className={className} onClick={(evt) => this.doClick(evt, project, props.bgColor)}>
-        <ImageDiv styleName="demo-img" />
+        <ImageDiv className="demo-img" />
         {infoDiv}
       </div>
     );
@@ -70,4 +69,4 @@ class DemoBox extends PureComponent {
   }
 }
 
-export default CSSModules(DemoBox, styles);
+export default DemoBox;
