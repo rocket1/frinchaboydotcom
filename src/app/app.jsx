@@ -5,6 +5,7 @@ import Header from '../ui/header';
 import Footer from '../ui/footer';
 import styles from './app.less';
 import cx from 'classnames';
+import headerImgSrc from "../img/hero-bg.jpg";
 import WebFont from 'webfontloader';
 
 class App extends Component {
@@ -41,7 +42,7 @@ class App extends Component {
       })
     };
 
-    img.src = "/img/hero-bg.jpg";
+    img.src = headerImgSrc;
 
     WebFont.load({
       google: {
