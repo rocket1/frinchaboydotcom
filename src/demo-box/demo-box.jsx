@@ -1,72 +1,53 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import cx from 'classnames';
 import styled from 'styled-components'
 import styles from './demo-box.less';
 
-class DemoBox extends PureComponent {
+const DemoBox = ({ config, demoBoxClick, bgColor }) => {
 
-  /**
-   *
-   * @param props
-   */
-  constructor(props) {
+  const project = config;
 
-    super(props);
-
-    const project = props.config;
-
-    const ImageDiv = styled.div`
+  const ImageDiv = styled.div`
             background-image: url(${project.imgSrc});
         `;
 
-    const InfoDiv = styled.div`
-            background-color: ${props.bgColor[0]};
-            box-shadow: inset 0 0 5em 1em ${props.bgColor[1]};
+  const InfoDiv = styled.div`
+            background-color: ${bgColor[0]};
+            box-shadow: inset 0 0 5em 1em ${bgColor[1]};
         `;
 
-    const url = project.url ? (
-      <div className={styles['url']}>
-        <a target="_blank" href={project.url} onClick={(e) => {
-          e.stopPropagation();
-        }}>{project.urlText ? project.urlText : project.url}</a>
-      </div>
-    ) : null;
+  const url = project.url ? (
+    <div className={styles['url']}>
+      <a target="_blank" href={project.url} onClick={(e) => {
+        e.stopPropagation();
+      }} rel="noreferrer">{project.urlText ? project.urlText : project.url}</a>
+    </div>
+  ) : null;
 
-    const infoDiv = project.title ? (<InfoDiv className={styles['info-div']}>
-      <div className={styles['title']}>{project.title}</div>
-      <div className={styles['description']}><div>{project.description}</div>{url}</div>
-    </InfoDiv>) : null;
+  const infoDiv = project.title ? (<InfoDiv className={styles['info-div']}>
+    <div className={styles['title']}>{project.title}</div>
+    <div className={styles['description']}>
+      <div>{project.description}</div>
+      {url}</div>
+  </InfoDiv>) : null;
 
-    const className = cx([[styles['demo-box']], {
-      [styles['no-info']]: !infoDiv
-    }]);
+  const className = cx([[styles['demo-box']], {
+    [styles['no-info']]: !infoDiv
+  }]);
 
-    this.StyledDemoBox = (
-      <div className={className} onClick={(evt) => this.doClick(evt, project, props.bgColor)}>
-        <ImageDiv className="demo-img" />
-        {infoDiv}
-      </div>
-    );
-  }
+  const StyledDemoBox = (
+    <div className={className} onClick={(evt) => doClick(evt, project, bgColor)}>
+      <ImageDiv className={styles['demo-img']} />
+      {infoDiv}
+    </div>
+  );
 
-  /**
-   *
-   * @param evt
-   * @param project
-   * @param bgColor
-   */
-  doClick(evt, project, bgColor) {
+  const doClick = (evt, project, bgColor) => {
     evt.preventDefault();
-    this.props.demoBoxClick(project, bgColor);
+    demoBoxClick(project, bgColor);
   }
 
-  /**
-   *
-   * @returns {XML}
-   */
-  render() {
-    return this.StyledDemoBox;
-  }
+  return StyledDemoBox;
 }
 
 export default DemoBox;
