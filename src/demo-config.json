@@ -30,6 +30,21 @@
       ]
     },
     {
+      "title": "Vero True Social Desktop",
+      "imgSrc": "/img/vero-1-small.jpg",
+      "description": "Lead Developer",
+      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/whisperer.resized.png",
+        "/img/whisperer-2.resized.png"
+      ]
+    },
+    {
       "title": "Whisperer (Google)",
       "imgSrc": "/img/whisperer-2.resized.png",
       "description": "Google sales tool (prototype)",

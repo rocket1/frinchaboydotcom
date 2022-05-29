@@ -1,44 +1,34 @@
-import React, {Component} from 'react';
+import React from 'react';
 import DemoBox from '../demo-box/demo-box';
 import demoConfig from '../demo-config.json';
 import MasonryInfiniteScroller from 'react-masonry-infinite';
 
-class DemoGrid extends Component {
+const DemoGrid = ({ready, demoBoxClick}) => {
 
-    /**
-     *
-     * @param props
-     */
-    constructor(props) {
+  const _demoBoxes = demoConfig.projects.map((config, index) => {
+    let bgColor = demoConfig.colors[index % demoConfig.colors.length];
+    return <DemoBox demoBoxClick={demoBoxClick} key={index} config={config} bgColor={bgColor} />
+  });
 
-        super(props);
 
-        this._demoBoxes = demoConfig.projects.map((config, index) => {
-            let bgColor = demoConfig.colors[index % demoConfig.colors.length];
-            return <DemoBox demoBoxClick={props.demoBoxClick} key={index} config={config} bgColor={bgColor}/>
-        });
-    }
+  // TODO: extract from CSS using a library.
+  const sizes = [
+    { columns: 1, gutter: 24 },
+    { mq: '768px', columns: 2, gutter: 24 },
+    { mq: '1200px', columns: 3, gutter: 24 },
+    { mq: '1600px', columns: 4, gutter: 24 },
+    { mq: '2000px', columns: 5, gutter: 24 },
+  ];
 
-    /**
-     *
-     * @returns {XML}
-     */
-    render() {
-
-        // TODO: extract from CSS using a library.
-        const sizes = [
-            {columns: 1, gutter: 24},
-            {mq: '768px', columns: 2, gutter: 24},
-            {mq: '1024px', columns: 3, gutter: 24}
-        ];
-
-        return this.props.ready ? (
-            <div className="demo-grid">
-                <MasonryInfiniteScroller sizes={sizes}
-                                         loadMore={() => false}>{this._demoBoxes}</MasonryInfiniteScroller>
-            </div>
-        ) : null;
-    }
+  return ready ? (
+    <div className="demo-grid">
+      <MasonryInfiniteScroller
+        sizes={sizes}
+        loadMore={() => false}>
+        {_demoBoxes}
+      </MasonryInfiniteScroller>
+    </div>
+  ) : null;
 }
 
 export default DemoGrid;
