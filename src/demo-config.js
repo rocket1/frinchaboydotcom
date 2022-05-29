@@ -1,4 +1,4 @@
-{
+export const demoConfig = {
   "colors": [
     [
       "rgba(33,140,141,.96)",
@@ -22,13 +22,13 @@
     ]
   ],
   "projects": [
-    {
-      "imgSrc": "/img/my-face-halftone.png",
-      "verbose": "Hello, I am Jason Frinchaboy. Computer Programmer. Web Developer. All around good guy.",
-      "screenshots": [
-        "/img/my-face-halftone.png"
-      ]
-    },
+    // {
+    //   "imgSrc": "/img/my-face-halftone.png",
+    //   "verbose": "Hello, I am Jason Frinchaboy. Computer Programmer. Web Developer. All around good guy.",
+    //   "screenshots": [
+    //     "/img/my-face-halftone.png"
+    //   ]
+    // },
     {
       "title": "Vero True Social Desktop",
       "imgSrc": "/img/vero-1-small.jpg",

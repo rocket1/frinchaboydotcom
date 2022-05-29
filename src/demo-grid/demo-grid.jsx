@@ -1,6 +1,6 @@
 import React from 'react';
 import DemoBox from '../demo-box/demo-box';
-import demoConfig from '../demo-config.json';
+import { demoConfig } from '../demo-config.js';
 import MasonryInfiniteScroller from 'react-masonry-infinite';
 
 const DemoGrid = ({ready, demoBoxClick}) => {
