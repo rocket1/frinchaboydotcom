@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
-import styles from './footer.less';
 import Links from './links';
+import styles from './footer.less';
 
 const Footer = ({ ready }) => {
   const className = cx(styles['footer'], {

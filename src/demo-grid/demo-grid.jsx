@@ -10,8 +10,6 @@ const DemoGrid = ({ready, demoBoxClick}) => {
     return <DemoBox demoBoxClick={demoBoxClick} key={index} config={config} bgColor={bgColor} />
   });
 
-
-  // TODO: extract from CSS using a library.
   const sizes = [
     { columns: 1, gutter: 24 },
     { mq: '768px', columns: 2, gutter: 24 },

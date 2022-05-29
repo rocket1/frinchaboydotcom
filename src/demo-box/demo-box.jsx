@@ -26,10 +26,10 @@ const DemoBox = ({ config, demoBoxClick, bgColor }) => {
 
   const infoDiv = project.title ? (<InfoDiv className={styles['info-div']}>
     <div className={styles['title']}>{project.title}</div>
-    {/*<div className={styles['description']}>*/}
-    {/*  <div>{project.description}</div>*/}
-    {/*  {url}*/}
-    {/*</div>*/}
+    <div className={styles['description']}>
+      <div>{project.description}</div>
+      {url}
+    </div>
   </InfoDiv>) : null;
 
   const className = cx([[styles['demo-box']], {
