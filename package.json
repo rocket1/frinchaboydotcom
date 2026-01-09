@@ -1,0 +1,8 @@
+{
+  "name": "frinchaboydotcom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rocket1/frinchaboydotcom.git",
+  "author": "Jason Frinchaboy <jazzmongrel@gmail.com>",
+  "license": "MIT"
+}
