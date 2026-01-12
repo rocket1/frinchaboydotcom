@@ -1,0 +1,140 @@
+@import "../ui/mixins.module";
+@import "../ui/variables.module";
+
+*[open-modal]:hover, *[close-modal]:hover {
+  cursor: pointer;
+}
+
+.demo-modal {
+
+  color: white;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  overflow-x: hidden;
+
+  .transition(~"visibility, opacity, z-index", 0.3s);
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+
+  &.show {
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .screenshots {
+
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    div.screenshot {
+
+      margin-bottom: 10px;
+
+      @media all and (max-width: 548px) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      img {
+
+        @w: 500px;
+        width: @w;
+        max-width: @w;
+
+        @media all and (max-width: 548px) {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @paddingX: 24px;
+  @paddingY: 24px;
+
+  .modal-wrapper {
+
+    position: relative;
+    display: flex;
+    flex: 1;
+
+    .toolbar-wrapper {
+
+      display: flex;
+      width: 100%;
+      top: 0;
+      position: fixed;
+      background-color: transparent;
+      padding: @paddingY @paddingX;
+      z-index: 1;
+
+      .toolbar {
+
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        h2 {
+          margin: 0;
+        }
+
+        svg {
+          color: white !important;
+        }
+      }
+    }
+
+    .body {
+
+      width: 100%;
+      padding: 90px @paddingX;
+      justify-content: center;
+      align-items: center;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+
+      .verbose, .tech {
+        max-width: 450px;
+        margin-bottom: 24px;
+      }
+
+      .tech {
+
+        font-size: .8rem;
+        opacity: .6;
+
+        a {
+          color: white;
+        }
+      }
+
+      .url {
+
+        margin-bottom: 10px;
+
+        a {
+          font-size: 1rem;
+          color: white;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

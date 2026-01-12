@@ -1,0 +1,43 @@
+@import "mixins.module";
+@import "variables.module";
+
+.footer {
+
+  opacity: 0;
+
+  .blur(20px);
+  .transition(~"opacity, filter", 1.0s);
+
+  @darken: 0.3;
+
+  background: linear-gradient(rgba(0, 0, 0, @darken), rgba(0, 0, 0, @darken)), url("/img/footer-bg.jpg");
+
+  box-shadow: inset 0 0 5em 1em rgba(0, 0, 0, .5);
+  overflow: hidden;
+
+  @bgSize: cover;
+  .bg-size(@bgSize);
+  background-position-y: bottom;
+  background-position-x: right;
+
+  height: @footer-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  a {
+    color: white;
+    padding: 0 12px;
+  }
+}
+
+.show {
+  opacity: 1;
+  .blur(0px);
+}
+

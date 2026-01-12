@@ -1,0 +1,499 @@
+export const demoConfig = {
+  "colors": [
+    [
+      "rgba(33,140,141,.96)",
+      "rgba(26,112,113,.96)"
+    ],
+    [
+      "rgba(108,206,203,.96)",
+      "rgba(99,185,192,.96)"
+    ],
+    [
+      "rgba(168,168,168,.96)",
+      "rgba(119,119,119,.96)"
+    ],
+    [
+      "rgba(71,62,63,.96)",
+      "rgba(41,37,37,.96)"
+    ],
+    [
+      "rgba(142,220,157,.96)",
+      "rgba(125,181,136,.96)"
+    ]
+  ],
+  "projects": [
+    // {
+    //   "imgSrc": "/img/my-face-halftone.png",
+    //   "verbose": "Hello, I am Jason Frinchaboy. Computer Programmer. Web Developer. All around good guy.",
+    //   "screenshots": [
+    //     "/img/my-face-halftone.png"
+    //   ]
+    // },
+    {
+      "title": "Vero True Social Desktop",
+      "imgSrc": "/img/vero-1-small.jpg",
+      "description": "Lead Developer",
+      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/whisperer.resized.png",
+        "/img/whisperer-2.resized.png"
+      ]
+    },
+    {
+      "title": "Whisperer (Google)",
+      "imgSrc": "/img/whisperer-2.resized.png",
+      "description": "Google sales tool (prototype)",
+      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/whisperer.resized.png",
+        "/img/whisperer-2.resized.png"
+      ]
+    },
+    {
+      "title": "Whisperer v2 (Google)",
+      "imgSrc": "/img/whisperer-v2.png",
+      "description": "Google sales tool (prototype)",
+      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/whisperer-v2.png",
+        "/img/whisperer-v2-2.png",
+        "/img/whisperer-v2-3.png",
+        "/img/whisperer-v2-4.png"
+      ]
+    },
+    {
+      "title": "Abacus (Google)",
+      "imgSrc": "/img/abacus.png",
+      "description": "Google sales tool (prototype)",
+      "verbose": "This tool was used by companies wishing to view metrics regarding their internal Google online tools usage (e.g. Docs, Sheets).",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/abacus.png"
+      ]
+    },
+    {
+      "title": "Diva (Google)",
+      "imgSrc": "/img/diva.resized.png",
+      "description": "Google retail tool (prototype).",
+      "verbose": "This was an inventory tool for retail.  It used RFID tracking of merchandise to accurately track inventory in-store or remote.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/diva.resized.png"
+      ]
+    },
+    {
+      "title": "MyWedding",
+      "imgSrc": "/img/mywedding.png",
+      "url": "http://www.mywedding.com",
+      "urlText": "www.mywedding.com",
+      "description": "Popular Wedding planning website.",
+      "verbose": "MyWedding is an internationally renowned wedding planning site.  I worked there for two years doing all things web development related.",
+      "tech": [
+        "JavaScript/JQuery",
+        "HTML",
+        "CSS",
+        "Zend Framework",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/mywedding-1.png"
+      ]
+    },
+    {
+      "title": "Ritual",
+      "imgSrc": "/img/ritual.jpg",
+      "description": "A prototype scavenger hunt app built with React Native.",
+      "github": "https://github.com/rocket1/tasks",
+      "tech": [
+        "React Native"
+      ],
+      "screenshots": [
+        "/img/ritual.jpg",
+        "/img/ritual-2.jpg",
+        "/img/ritual-3.png",
+        "/img/ritual-4.png"
+      ]
+    },
+    {
+      "title": "PDX Flix",
+      "imgSrc": "/img/pdxflix.png",
+      "url": "http://www.pdxflix.com",
+      "urlText": "www.pdxflix.com",
+      "description": "A movie time web-app for Portland residents.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/pdxflix.png"
+      ]
+    },
+    {
+      "title": "No Rain",
+      "imgSrc": "/img/norain.jpg",
+      "description": "A website to help find nearby locations with sunshine.",
+      "tech": [
+        "NodeJS/Express",
+        "React"
+      ],
+      "screenshots": [
+        "/img/norain.jpg"
+      ]
+    },
+    {
+      "title": "Junkmedia",
+      "imgSrc": "/img/junkmedia.png",
+      "url": "https://web.archive.org/web/20081019214827/http://www.junkmedia.org:80/index.php",
+      "urlText": "archived demo",
+      "description": "Junkmedia was an online music review magazine founded in 2002.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/junkmedia.png"
+      ]
+    },
+    {
+      "title": "The Hilt",
+      "imgSrc": "/img/hilt.resized.png",
+      "url": "https://web.archive.org/web/20090922214742/https://www.thehiltbar.com/",
+      "urlText": "archived demo",
+      "description": "The Hilt is a popular bar on Alberta St. in Portland, Oregon.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "screenshots": [
+        "/img/hilt.resized.png"
+      ]
+    },
+    {
+      "title": "Mancala",
+      "imgSrc": "/img/mancala.png",
+      "url": "http://mancala2.nfshost.com/",
+      "urlText": "demo",
+      "description": "An attempt to port my college Artificial Intelligence project from C++ to JS.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/mancala.png"
+      ]
+    },
+    {
+      "title": "North American Repower",
+      "imgSrc": "/img/nar.png",
+      "description": "Environmental engine manufacturer for commercial trucks.",
+      "verbose": "NAR develops diesel-to-natural gas conversion kits for semi trucks. I built an installer system that allows secure installation records and for the EPA to search for vehicle history by VIN.",
+      "tech": [
+        "Laravel",
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/nar.png"
+      ]
+    },
+    {
+      "title": "O/M Studio",
+      "imgSrc": "/img/om.resized.png",
+      "url": "http://omstudio.co/",
+      "urlText": "omstudio.co",
+      "description": "O/M is a design studio based in San Francisco.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/om.resized.png"
+      ]
+    },
+    {
+      "title": "Asylum Arts",
+      "imgSrc": "/img/asylum-arts.resized.png",
+      "url": "http://www.asylum-arts.org",
+      "urlText": "www.asylum-arts.org",
+      "description": "Artist fellowship from New York.",
+      "tech": [
+        "Yii",
+        "AngularJS",
+        "React",
+        "HTML",
+        "LESS/CSS",
+        "MySQL",
+        "PHP"
+      ],
+      "screenshots": [
+        "/img/asylum-arts.resized.png",
+        "/img/asylum-arts-2.resized.png",
+        "/img/asylum-arts-4.resized.png"
+      ]
+    },
+    {
+      "title": "MIGA",
+      "imgSrc": "/img/miga.resized.png",
+      "description": "Artist fellowship from New York.",
+      "tech": [
+        "Yii",
+        "AngularJS",
+        "HTML",
+        "LESS/CSS",
+        "MySQL",
+        "PHP"
+      ],
+      "screenshots": [
+        "/img/miga.resized.png"
+      ]
+    },
+    {
+      "title": "Slide Viewer",
+      "imgSrc": "/img/slide-viewer.resized.png",
+      "url": "http://ceuonline.nfshost.com/",
+      "urlText": "demo",
+      "description": "Slide viewer is for delivering online tests.",
+      "tech": [
+        "React",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/slide-viewer.resized.png"
+      ]
+    },
+    {
+      "title": "Six Points Fellowship",
+      "imgSrc": "/img/6points.png",
+      "description": "Artist fellowship from New York.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "LESS/CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/6points.png"
+      ]
+    },
+    {
+      "title": "Six Points Fellowship v2",
+      "imgSrc": "/img/6points-v2.resized.png",
+      "description": "Artist fellowship from New York.",
+      "tech": [
+        "WordPress",
+        "JavaScript",
+        "HTML",
+        "LESS/CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/6points-v2.resized.png",
+        "/img/6points-v2-2.resized.png",
+        "/img/6points-v2-3.resized.png"
+      ]
+    },
+    {
+      "title": "Ben Lee (Musician)",
+      "imgSrc": "/img/ben-lee.resized.png",
+      "url": "https://web.archive.org/web/20060614224957/http://www.ben-lee.com:80/main_page.php",
+      "urlText": "archived demo",
+      "description": "Musician from Australia.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "LESS/CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/ben-lee.resized.png",
+        "/img/ben-lee-2.resized.png"
+      ]
+    },
+    {
+      "title": "The Peels (Band)",
+      "imgSrc": "/img/the-peels.png",
+      "description": "Long defunct band that was briefly signed to Columbia records.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/the-peels.png"
+      ]
+    },
+    {
+      "title": "Combio",
+      "imgSrc": "/img/combio.png",
+      "description": "Combio was a web-portal company alive during the Great Internet Crash.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/combio.png"
+      ]
+    },
+    {
+      "title": "Van Diemen's Land",
+      "imgSrc": "/img/van-diemen.png",
+      "description": "Van Diemen's land was an Australian rock band collective.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/van-diemen.png"
+      ]
+    },
+    {
+      "title": "Find Your Junk",
+      "imgSrc": "/img/fyj.png",
+      "description": "A public lost and found website.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/fyj.png"
+      ]
+    },
+    {
+      "title": "Machine Vision Products",
+      "imgSrc": "/img/mvp.png",
+      "url": "http://www.visionpro.com",
+      "urlText": "www.visionpro.com",
+      "description": "MVP builds Automated Optical Inspection machines.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/mvp.png"
+      ]
+    },
+    {
+      "title": "Machine Vision Products (CRM)",
+      "imgSrc": "/img/mvp-support.png",
+      "url": "http://www.visionpro.com",
+      "urlText": "www.visionpro.com",
+      "description": "A custom CRM tool for Machine Vision Products.",
+      "verbose": "Built in 2006, this custom CRM tool is still in use today for customer management and bug tracking.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/mvp-support.png",
+        "/img/mvp-support-2.png"
+      ]
+    },
+    {
+      "title": "My public portfolio",
+      "imgSrc": "/img/frinchaboy.jpg",
+      "url": "http://frinchaboy.com/",
+      "urlText": "frinchaboy.com",
+      "description": "The site you are currently looking at was built with React.",
+      "tech": [
+        "React"
+      ],
+      "screenshots": [
+        "/img/frinchaboy.jpg"
+      ]
+    },
+    {
+      "title": "Nathan James & Ben Hernandez (Musicians)",
+      "imgSrc": "/img/nathan-james.png",
+      "description": "Nathan James is a world-class blues musician.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/nathan-james.png"
+      ]
+    },
+    {
+      "title": "Nathan James (Musician)",
+      "imgSrc": "/img/nathan-james-v2.png",
+      "description": "Nathan James is a world-class blues musician.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL"
+      ],
+      "screenshots": [
+        "/img/nathan-james-v2.png"
+      ]
+    },
+    {
+      "title": "LNWIA",
+      "imgSrc": "/img/lnwia.png",
+      "description": "LNWIA is an insurance company based in Oceanside, CA.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "screenshots": [
+        "/img/lnwia.png"
+      ]
+    }
+  ]
+}
