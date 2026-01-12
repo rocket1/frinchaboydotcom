@@ -18,7 +18,7 @@ class Header extends Component {
                 <div className={styles['hero']}>
                     <div className={styles['hero-text']}>
                         <h1>Jason Frinchaboy</h1>
-                        <h2>Greatest Hits</h2>
+                        <h2>jazzmongrel@gmail.com</h2>
                     </div>
                     <Links/>
                 </div>

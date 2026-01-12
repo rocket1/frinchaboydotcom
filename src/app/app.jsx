@@ -5,7 +5,7 @@ import Header from '../ui/header';
 import Footer from '../ui/footer';
 import styles from './app.module.less';
 import cx from 'classnames';
-import headerImgSrc from "../../public/img/hero-bg.jpg";
+import headerImgSrc from "../../public/img/astoria-banner.jpg";
 import WebFont from 'webfontloader';
 
 class App extends Component {
