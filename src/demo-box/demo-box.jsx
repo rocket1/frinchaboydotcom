@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import styled from 'styled-components'
+import { Project } from "../demo-modal/project.jsx";
 import styles from './demo-box.module.less';
 
 const DemoBox = ({ config, demoBoxClick, bgColor }) => {
@@ -45,7 +46,7 @@ const DemoBox = ({ config, demoBoxClick, bgColor }) => {
 
   const doClick = (evt, project, bgColor) => {
     evt.preventDefault();
-    demoBoxClick(project, bgColor);
+    demoBoxClick(<Project project={project} />, project.title, bgColor);
   }
 
   return StyledDemoBox;

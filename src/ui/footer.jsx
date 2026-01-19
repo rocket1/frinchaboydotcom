@@ -1,9 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
-import Links from './links';
+import { Links } from './links';
 import styles from './footer.module.less';
 
-const Footer = ({ ready }) => {
+export const Footer = ({ ready }) => {
   const className = cx(styles['footer'], {
     [styles.show]: ready
   });
@@ -14,7 +14,5 @@ const Footer = ({ ready }) => {
     </div>
   )
 }
-
-export default Footer;
 
 

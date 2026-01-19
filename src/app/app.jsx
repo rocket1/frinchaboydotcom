@@ -1,116 +1,74 @@
-import React, { Component } from 'react';
-import DemoGrid from '../demo-grid/demo-grid';
-import DemoModal from '../demo-modal/demo-modal';
-import Header from '../ui/header';
-import Footer from '../ui/footer';
+import React, { useEffect, useState } from 'react';
+import { DemoGrid } from '../demo-grid/demo-grid';
+import { DemoModal } from '../demo-modal/demo-modal';
+import { Header } from '../ui/header';
+import { Footer } from '../ui/footer';
 import styles from './app.module.less';
 import cx from 'classnames';
 import headerImgSrc from "../../public/img/astoria-banner.jpg";
 import WebFont from 'webfontloader';
 
-class App extends Component {
+export const App = () => {
+  const [modalTitle, setModalTitle] = useState(null);
+  const [modalContent, setModalContent] = useState(null);
+  const [modalBgColor, setModalBgColor] = useState(null);
+  const [contentReady, setContentReady] = useState(null);
+  const [fontReady, setFontReady] = useState(null);
 
-  /**
-   *
-   * @param props
-   */
-  constructor(props) {
-
-    super(props);
-
-    this.state = {
-      project: null,
-      modalBgColor: null,
-      contentReady: false,
-      fontReady: false
-    };
-
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
-
-  /**
-   *
-   */
-  componentDidMount() {
-
+  useEffect(() => {
     const img = new Image();
 
     img.onload = () => {
-      this.setState({
-        contentReady: true
-      })
+      setContentReady(true);
     };
 
     img.src = headerImgSrc;
 
     WebFont.load({
       google: {
-        families: ['Noto Sans', 'Merriweather']
+        families: ['Noto Sans', 'Merriweather', 'Material Icons']
       },
       active: () => {
-        this.setState({
-          fontReady: true
-        })
+        setFontReady(true);
       }
     });
-  };
+  }, []);
 
-  /**
-   *
-   * @param e
-   */
   // @keydown('esc')
-  submit(e) {
+  const submit = (e) => {
     e.preventDefault();
-    this.closeModal();
+    closeModal();
   }
 
-  /**
-   *
-   * @param project
-   * @param bgColor
-   */
-  openModal(project, bgColor) {
-    this.setState({ modalBgColor: bgColor, project: project });
+  const openModal = (modalContent, modalTitle, bgColor) => {
+    setModalBgColor(bgColor);
+    setModalContent(modalContent);
+    setModalTitle(modalTitle);
   }
 
-  /**
-   *
-   */
-  closeModal() {
-    this.setState({ project: null });
+  const closeModal = () => {
+    setModalContent(null);
   }
 
-  /**
-   *
-   * @returns {XML}
-   */
-  render() {
 
-    const ready = this.state.contentReady && this.state.fontReady;
+  const ready = contentReady && fontReady;
 
-    const bodyCx = cx(styles['app-body'], {
-      [styles.show]: ready
-    });
+  const bodyCx = cx(styles['app-body'], {
+    [styles.show]: ready
+  });
 
-    return (
-      <React.Fragment>
-        <Footer ready={ready} />
-        <DemoModal project={this.state.project} closeFunc={this.closeModal} bgColor={this.state.modalBgColor} />
-        <div className={bodyCx}>
-          <Header />
-          <div className={styles['content']}>
-            <div className={styles['content-inner']}>
-              <DemoGrid ready={ready} demoBoxClick={this.openModal} />
-            </div>
-          </div>
+  return <React.Fragment>
+    <Footer ready={ready} />
+    <DemoModal modalTitle={modalTitle} modalContent={modalContent} closeFunc={closeModal} bgColor={modalBgColor} />
+    <div className={bodyCx}>
+      <Header openModal={openModal} />
+      <div className={styles['content']}>
+        <div className={styles['content-inner']}>
+          <DemoGrid ready={ready} demoBoxClick={openModal} />
         </div>
-      </React.Fragment>
-    )
-  }
+      </div>
+    </div>
+  </React.Fragment>
 }
-
-export default App;
 
 

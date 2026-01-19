@@ -3,7 +3,7 @@ import DemoBox from '../demo-box/demo-box';
 import { demoConfig } from '../demo-config.js';
 import MasonryInfiniteScroller from 'react-masonry-infinite';
 
-const DemoGrid = ({ready, demoBoxClick}) => {
+export const DemoGrid = ({ready, demoBoxClick}) => {
 
   const _demoBoxes = demoConfig.projects.map((config, index) => {
     let bgColor = demoConfig.colors[index % demoConfig.colors.length];
@@ -28,5 +28,3 @@ const DemoGrid = ({ready, demoBoxClick}) => {
     </div>
   ) : null;
 }
-
-export default DemoGrid;
