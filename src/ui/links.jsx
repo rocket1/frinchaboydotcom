@@ -5,7 +5,7 @@ import styles from './links.module.less';
 export const Links = ({ openModal }) => {
   const clickAboutLink = (e) => {
     e.stopPropagation();
-    openModal(<About />, 'Jason Frinchaboy');
+    openModal(<About />, 'Jason Frinchaboy', 'rgb(58,143,247)');
   }
 
   return <div className={styles['links']}>

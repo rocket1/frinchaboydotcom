@@ -33,17 +33,22 @@ export const DemoModal = ({ closeFunc, modalContent, modalTitle, bgColor }) => {
   });
 
   return <div className={className} style={{ backgroundColor: bgColor }}>
-    <div className="modal-wrapper">
-      <div className="toolbar-wrapper">
-        <div className="toolbar">
+    <div className={styles['modal-wrapper']}>
+      <div className={styles['toolbar-wrapper']}>
+        <div className={styles['toolbar']}>
           <h2>{modalTitle}</h2>
           <a onClick={(e) => closeModal(e)} href="">
-            {/*<Close />*/}
-            X
+            <button
+              type="button"
+              className={`${styles["close-icon"]} material-icons`}
+              aria-label="Close modal"
+            >
+            close
+            </button>
           </a>
         </div>
       </div>
-      <div className="body">
+      <div className={styles['body']}>
         {modalContent}
       </div>
     </div>

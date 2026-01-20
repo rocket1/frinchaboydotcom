@@ -6,7 +6,6 @@
 }
 
 .demo-modal {
-
   color: white;
   z-index: -1;
   visibility: hidden;
@@ -29,7 +28,6 @@
   }
 
   .screenshots {
-
     display: flex;
     flex-grow: 1;
     width: 100%;
@@ -37,27 +35,7 @@
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 
-    div.screenshot {
 
-      margin-bottom: 10px;
-
-      @media all and (max-width: 548px) {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      img {
-
-        @w: 500px;
-        width: @w;
-        max-width: @w;
-
-        @media all and (max-width: 548px) {
-          width: 100%;
-          max-width: 100%;
-        }
-      }
-    }
   }
 
   @paddingX: 24px;
@@ -135,6 +113,42 @@
         flex-direction: column;
         align-items: center;
       }
+    }
+  }
+}
+
+.close-icon {
+  font-size: 22px !important;
+  position: relative !important;
+  top: 3px !important;
+  left: 3px !important;
+
+  all: unset; /* removes ALL default button styles */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+
+  background: transparent; /* safety */
+  color: white; /* icon color */
+  line-height: 1;
+}
+
+.screenshot {
+  margin: 20px 0;
+
+  @media all and (max-width: 548px) {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  img {
+    @w: 1200px;
+    width: @w;
+    max-width: @w;
+
+    @media all and (max-width: 548px) {
+      width: 100%;
+      max-width: 100%;
     }
   }
 }

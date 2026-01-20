@@ -2,6 +2,7 @@ import React from 'react';
 import DemoBox from '../demo-box/demo-box';
 import { demoConfig } from '../demo-config.js';
 import MasonryInfiniteScroller from 'react-masonry-infinite';
+import styles from "../demo-modal/demo-modal.module.less";
 
 export const DemoGrid = ({ready, demoBoxClick}) => {
 
@@ -19,7 +20,7 @@ export const DemoGrid = ({ready, demoBoxClick}) => {
   ];
 
   return ready ? (
-    <div className="demo-grid">
+    <div className={styles['demo-grid']}>
       <MasonryInfiniteScroller
         sizes={sizes}
         loadMore={() => false}>
