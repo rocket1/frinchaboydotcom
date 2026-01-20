@@ -22,13 +22,13 @@ export const demoConfig = {
     ]
   ],
   "projects": [
-    {
-      "imgSrc": "/img/my-face-halftone.png",
-      "verbose": "Hello, I am Jason Frinchaboy. Computer Programmer. Web Developer. All around good guy.",
-      "screenshots": [
-        "/img/my-face-halftone.png"
-      ]
-    },
+    // {
+    //   "imgSrc": "/img/my-face-halftone.png",
+    //   "verbose": "Hello, I am Jason Frinchaboy. Computer Programmer. Web Developer. All around good guy.",
+    //   "screenshots": [
+    //     "/img/my-face-halftone.png"
+    //   ]
+    // },
     // {
     //   "title": "Vero True Social Desktop",
     //   "imgSrc": "/img/vero-1-small.jpg",
@@ -44,6 +44,35 @@ export const demoConfig = {
     //     "/img/whisperer-2.resized.png"
     //   ]
     // },
+    {
+      "latest": true,
+      "title": "VERO",
+      "imgSrc": "/img/vero-small.jpg",
+      "description": "Social Media application (ElectronJS)",
+      "verbose": "An ad-free, algorithm-free social network for desktop, focused on real connections and chronological feeds.",
+      "tech": [
+        "ElectronJS",
+        "ReactJS"
+      ],
+      "screenshots": [
+        "/img/vero-small.jpg",
+      ]
+    },
+    {
+      "title": "Whisperer (Google)",
+      "imgSrc": "/img/whisperer-2.resized.png",
+      "description": "Google sales tool (prototype)",
+      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        "/img/whisperer.resized.png",
+        "/img/whisperer-2.resized.png"
+      ]
+    },
     {
       "title": "Whisperer (Google)",
       "imgSrc": "/img/whisperer-2.resized.png",

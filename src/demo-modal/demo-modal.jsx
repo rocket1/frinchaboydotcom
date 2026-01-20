@@ -1,12 +1,22 @@
 import cx from "classnames";
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "./demo-modal.module.less";
 
 export const DemoModal = ({ closeFunc, modalContent, modalTitle, bgColor }) => {
-  const closeModal = (e) => {
-    e.preventDefault();
-    closeFunc();
-  }
+  useEffect(() => {
+
+    const onKeydown = (e) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeFunc();
+      }
+    };
+
+    document.addEventListener('keydown', onKeydown);
+    return () => {
+      document.removeEventListener('keydown', onKeydown);
+    };
+  }, []);
 
   const _lockScroll = () => {
     document.getElementsByTagName('html')[0].style.overflow = 'hidden';
@@ -42,8 +52,12 @@ export const DemoModal = ({ closeFunc, modalContent, modalTitle, bgColor }) => {
               type="button"
               className={`${styles["close-icon"]} material-icons`}
               aria-label="Close modal"
+              onClick={(e) => {
+                e.preventDefault();
+                closeFunc();
+              }}
             >
-            close
+              close
             </button>
           </a>
         </div>

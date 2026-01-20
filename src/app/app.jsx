@@ -34,12 +34,6 @@ export const App = () => {
     });
   }, []);
 
-  // @keydown('esc')
-  const submit = (e) => {
-    e.preventDefault();
-    closeModal();
-  }
-
   const openModal = (modalContent, modalTitle, bgColor) => {
     setModalBgColor(bgColor);
     setModalContent(modalContent);
@@ -49,7 +43,6 @@ export const App = () => {
   const closeModal = () => {
     setModalContent(null);
   }
-
 
   const ready = contentReady && fontReady;
 
