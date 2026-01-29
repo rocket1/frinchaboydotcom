@@ -6,10 +6,15 @@ import styles from "../demo-modal/demo-modal.module.less";
 
 export const DemoGrid = ({ ready, demoBoxClick }) => {
 
-  const getDemoBoxes = (projects) => {
+  const getDemoBoxes = (projects, size) => {
     return projects.map((config, index) => {
       let bgColor = demoConfig.colors[index % demoConfig.colors.length];
-      return <DemoBox demoBoxClick={demoBoxClick} key={index} config={config} bgColor={bgColor} />
+      const props = { demoBoxClick, config, bgColor };
+      if (size) {
+        props.size = size;
+      }
+      // console.log('size:', size);
+      return <DemoBox key={index} {...props} />
     });
   }
 
@@ -17,13 +22,13 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
 
   const past = demoConfig.projects.filter(p => !p.latest);
 
-  console.log('latest:', latest, 'past:', past);
+  // console.log('latest:', latest, 'past:', past);
 
   const latestBoxes = getDemoBoxes(latest);
 
-  const pastBoxes = getDemoBoxes(past);
+  const pastBoxes = getDemoBoxes(past, 'small');
 
-  const sizes = [
+  const sizesLatest = [
     { columns: 1, gutter: 24 },
     { mq: '768px', columns: 2, gutter: 24 },
     { mq: '1200px', columns: 3, gutter: 24 },
@@ -31,18 +36,26 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
     { mq: '2000px', columns: 5, gutter: 24 },
   ];
 
+  const sizesPast = [
+    { columns: 2, gutter: 24 },
+    { mq: '768px', columns: 4, gutter: 24 },
+    { mq: '1200px', columns: 6, gutter: 24 },
+    { mq: '1600px', columns: 8, gutter: 24 },
+    { mq: '2000px', columns: 10, gutter: 24 },
+  ];
+
   return ready ? (
     <div className={styles['demo-grid']}>
       <h2>Latest Work</h2>
       <MasonryInfiniteScroller
-        sizes={sizes}
+        sizes={sizesLatest}
         loadMore={() => false}>
         {latestBoxes}
       </MasonryInfiniteScroller>
       <br />
       <h2>Past Work</h2>
       <MasonryInfiniteScroller
-        sizes={sizes}
+        sizes={sizesPast}
         loadMore={() => false}>
         {pastBoxes}
       </MasonryInfiniteScroller>

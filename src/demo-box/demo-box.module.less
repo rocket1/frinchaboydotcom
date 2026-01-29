@@ -2,61 +2,10 @@
 @import "../ui/variables.module";
 
 .demo-box {
-
-  @w: @box-width;
-  @h: @box-height;
-
   display: flex;
   flex-direction: column;
 
-  width: @w;
-  height: @h;
-
-  .info-div {
-
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    color: white;
-
-    .title {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .description {
-      //font-family: sans-serif;
-      font-size: .9rem;
-      line-height: 1.4;
-    }
-
-    .url {
-      a {
-        color: white;
-      }
-    }
-  }
-
-  .demo-img {
-    width: @w;
-    height: 240px;
-    @bgSize: cover;
-    .bg-size(@bgSize);
-    background-position-y: top;
-  }
-
-  &.no-info {
-    .demo-img {
-      height: @h;
-    }
-  }
-
-  will-change: transform, opacity;
-
   &:hover {
-
     cursor: pointer;
     transform: scale(1.07);
     z-index: 2;
@@ -65,7 +14,6 @@
     transition-duration: @t;
     // !!!!! Crazy ass property helps chrome with the animations... maybe!! Works great in Safari :P :P :P
     will-change: transform, opacity;
-
 
     @media @mobile-small {
       cursor: default;
@@ -76,6 +24,87 @@
       transition-duration: @t;
       // !!!!! Crazy ass property helps chrome with the animations... maybe!! Works great in Safari :P :P :P
       will-change: 0;
+    }
+  }
+
+  .demo-img {
+    @bgSize: cover;
+    .bg-size(@bgSize);
+    background-position-y: top;
+  }
+
+  .info-div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+
+    .url {
+      a {
+        color: white;
+      }
+    }
+  }
+
+  will-change: transform, opacity;
+}
+
+.demo-box-large {
+  .demo-box;
+  width: @box-width-large;
+  height: @box-height-large;
+
+  .demo-img {
+    width: @box-width-large;
+    height: 240px;
+  }
+
+  .info-div {
+    padding: 15px;
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .description {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  }
+
+  &.no-info {
+    .demo-img {
+      height: @box-height-large;
+    }
+  }
+}
+
+.demo-box-small {
+  .demo-box;
+  width: @box-width-small;
+  height: @box-height-small;
+
+  .demo-img {
+    width: @box-width-small;
+    height: 120px;
+  }
+
+  .info-div {
+    padding: 15px;
+
+    .title {
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
+
+  &.no-info {
+    .demo-img {
+      height: @box-height-small;
     }
   }
 }

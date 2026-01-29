@@ -1,24 +1,24 @@
 export const demoConfig = {
   "colors": [
     [
-      "rgba(33,140,141,.96)",
-      "rgba(26,112,113,.96)"
+      "rgba(33,140,141,1.0)",
+      "rgba(26,112,113,1.0)"
     ],
     [
-      "rgba(108,206,203,.96)",
-      "rgba(99,185,192,.96)"
+      "rgba(108,206,203,1.0)",
+      "rgba(99,185,192,1.0)"
     ],
     [
-      "rgba(168,168,168,.96)",
-      "rgba(119,119,119,.96)"
+      "rgba(168,168,168,1.0)",
+      "rgba(119,119,119,1.0)"
     ],
     [
-      "rgba(71,62,63,.96)",
-      "rgba(41,37,37,.96)"
+      "rgba(71,62,63,1.0)",
+      "rgba(41,37,37,1.0)"
     ],
     [
-      "rgba(142,220,157,.96)",
-      "rgba(125,181,136,.96)"
+      "rgba(142,220,157,1.0)",
+      "rgba(125,181,136,1.0)"
     ]
   ],
   "projects": [
@@ -48,8 +48,8 @@ export const demoConfig = {
       "latest": true,
       "title": "VERO",
       "imgSrc": "/img/vero-small.jpg",
-      "description": "Social Media application (ElectronJS)",
-      "verbose": "An ad-free, algorithm-free social network for desktop, focused on real connections and chronological feeds.",
+      "description": "Social Media (ElectronJS)",
+      "verbose": "A social networking app designed as an ad-free, algorithm-free alternative to mainstream platforms like Instagram and Facebook.",
       "tech": [
         "ElectronJS",
         "ReactJS"

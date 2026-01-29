@@ -5,8 +5,15 @@
 @mobile-small: ~"all and (max-width: 767px)";
 //@media all and (max-width: 480px) { ... }
 
-@box-width: 350px;
-@box-height: 325px;
+
+
+@box-width-large: 350px;
+@box-height-large: 326px;
+
+@scals: .5;
+@box-width-small: @box-width-large * @scals;
+@box-height-small: @box-height-large * @scals;
+
 @footer-height: 450px;
 
 @font-family-h1: 'Merriweather', serif;
