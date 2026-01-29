@@ -48,7 +48,7 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
 
   return ready ? (
     <div className={styles['demo-grid']}>
-      <h2>Current Work</h2>
+      {/*<h2>Current Work</h2>*/}
       {/*<MasonryInfiniteScroller*/}
       {/*  sizes={sizesLatest}*/}
       {/*  loadMore={() => false}>*/}
