@@ -54,13 +54,13 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
       {/*  loadMore={() => false}>*/}
         {latestBoxes}
       {/*</MasonryInfiniteScroller>*/}
-      <br />
-      <h2>Past Work</h2>
-      <MasonryInfiniteScroller
-        sizes={sizesPast}
-        loadMore={() => false}>
-        {pastBoxes}
-      </MasonryInfiniteScroller>
+      {/*<br />*/}
+      {/*<h2>Past Work</h2>*/}
+      {/*<MasonryInfiniteScroller*/}
+      {/*  sizes={sizesPast}*/}
+      {/*  loadMore={() => false}>*/}
+      {/*  {pastBoxes}*/}
+      {/*</MasonryInfiniteScroller>*/}
     </div>
   ) : null;
 }
