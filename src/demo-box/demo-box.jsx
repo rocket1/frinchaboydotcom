@@ -43,7 +43,7 @@ const DemoBox = ({ config, demoBoxClick, bgColor, size }) => {
   const StyledDemoBox = (
     <div className={className} onClick={(evt) => doClick(evt, project, bgColor)}>
       <ImageDiv className={styles['demo-img']} />
-      {infoDiv}
+      {/*{infoDiv}*/}
     </div>
   );
 
