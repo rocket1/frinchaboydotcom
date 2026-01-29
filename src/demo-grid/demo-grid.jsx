@@ -36,22 +36,24 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
     { mq: '2000px', columns: 5, gutter: 24 },
   ];
 
+  const gutterSmall = 12;
+
   const sizesPast = [
-    { columns: 2, gutter: 24 },
-    { mq: '768px', columns: 4, gutter: 24 },
-    { mq: '1200px', columns: 6, gutter: 24 },
-    { mq: '1600px', columns: 8, gutter: 24 },
-    { mq: '2000px', columns: 10, gutter: 24 },
+    { columns: 2, gutter: gutterSmall },
+    { mq: '768px', columns: 4, gutter: gutterSmall },
+    { mq: '1200px', columns: 6, gutter: gutterSmall },
+    { mq: '1600px', columns: 8, gutter: gutterSmall },
+    { mq: '2000px', columns: 10, gutter: gutterSmall },
   ];
 
   return ready ? (
     <div className={styles['demo-grid']}>
-      <h2>Latest Work</h2>
-      <MasonryInfiniteScroller
-        sizes={sizesLatest}
-        loadMore={() => false}>
+      <h2>Current Work</h2>
+      {/*<MasonryInfiniteScroller*/}
+      {/*  sizes={sizesLatest}*/}
+      {/*  loadMore={() => false}>*/}
         {latestBoxes}
-      </MasonryInfiniteScroller>
+      {/*</MasonryInfiniteScroller>*/}
       <br />
       <h2>Past Work</h2>
       <MasonryInfiniteScroller
