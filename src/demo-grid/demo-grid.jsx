@@ -39,7 +39,7 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
   const gutterSmall = 12;
 
   const sizesPast = [
-    { columns: 2, gutter: gutterSmall },
+    { columns: 1, gutter: gutterSmall },
     { mq: '768px', columns: 4, gutter: gutterSmall },
     { mq: '1200px', columns: 6, gutter: gutterSmall },
     { mq: '1600px', columns: 8, gutter: gutterSmall },
