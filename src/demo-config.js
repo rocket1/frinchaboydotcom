@@ -2,23 +2,28 @@ export const demoConfig = {
   "colors": [
     [
       "rgba(33,140,141,1.0)",
-      "rgba(26,112,113,1.0)"
+      "rgba(26,112,113,1.0)",
+      "BLUE"
     ],
     [
-      "rgba(108,206,203,1.0)",
-      "rgba(99,185,192,1.0)"
+      "rgb(137,75,140)",
+      "rgb(106,62,121)",
+      "PURPLE"
     ],
     [
       "rgba(168,168,168,1.0)",
-      "rgba(119,119,119,1.0)"
+      "rgba(119,119,119,1.0)",
+      "GRAY"
     ],
     [
       "rgba(71,62,63,1.0)",
-      "rgba(41,37,37,1.0)"
+      "rgba(41,37,37,1.0)",
+      "DARK GRAY"
     ],
     [
-      "rgba(142,220,157,1.0)",
-      "rgba(125,181,136,1.0)"
+      "rgb(57,89,65)",
+      "rgb(53,80,58)",
+      "GREEN"
     ]
   ],
   "projects": [
@@ -62,22 +67,7 @@ export const demoConfig = {
       "title": "Whisperer (Google)",
       "imgSrc": "/img/whisperer-2.resized.png",
       "description": "Google sales tool (prototype)",
-      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
-      "tech": [
-        "AngularJS",
-        "HTML",
-        "LESS/CSS"
-      ],
-      "screenshots": [
-        "/img/whisperer.resized.png",
-        "/img/whisperer-2.resized.png"
-      ]
-    },
-    {
-      "title": "Whisperer (Google)",
-      "imgSrc": "/img/whisperer-2.resized.png",
-      "description": "Google sales tool (prototype)",
-      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
+      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that are used in conjunction with CRM tools.",
       "tech": [
         "AngularJS",
         "HTML",
@@ -92,7 +82,7 @@ export const demoConfig = {
       "title": "Whisperer v2 (Google)",
       "imgSrc": "/img/whisperer-v2.png",
       "description": "Google sales tool (prototype)",
-      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that is used in conjunction with CRM tools.",
+      "verbose": "This is the second iteration of a tool is used by Google's internal Marketing department to manage a database of client 'stories' that are used in conjunction with CRM tools.",
       "tech": [
         "AngularJS",
         "HTML",
@@ -136,8 +126,6 @@ export const demoConfig = {
     {
       "title": "MyWedding",
       "imgSrc": "/img/mywedding.png",
-      "url": "http://www.mywedding.com",
-      "urlText": "www.mywedding.com",
       "description": "Popular Wedding planning website.",
       "verbose": "MyWedding is an internationally renowned wedding planning site.  I worked there for two years doing all things web development related.",
       "tech": [
@@ -169,8 +157,6 @@ export const demoConfig = {
     {
       "title": "PDX Flix",
       "imgSrc": "/img/pdxflix.png",
-      "url": "http://www.pdxflix.com",
-      "urlText": "www.pdxflix.com",
       "description": "A movie time web-app for Portland residents.",
       "tech": [
         "AngularJS",
@@ -196,8 +182,6 @@ export const demoConfig = {
     {
       "title": "Junkmedia",
       "imgSrc": "/img/junkmedia.png",
-      "url": "https://web.archive.org/web/20081019214827/http://www.junkmedia.org:80/index.php",
-      "urlText": "archived demo",
       "description": "Junkmedia was an online music review magazine founded in 2002.",
       "tech": [
         "JavaScript",
@@ -213,8 +197,6 @@ export const demoConfig = {
     {
       "title": "The Hilt",
       "imgSrc": "/img/hilt.resized.png",
-      "url": "https://web.archive.org/web/20090922214742/https://www.thehiltbar.com/",
-      "urlText": "archived demo",
       "description": "The Hilt is a popular bar on Alberta St. in Portland, Oregon.",
       "tech": [
         "JavaScript",
@@ -228,9 +210,7 @@ export const demoConfig = {
     {
       "title": "Mancala",
       "imgSrc": "/img/mancala.png",
-      "url": "http://mancala2.nfshost.com/",
-      "urlText": "demo",
-      "description": "An attempt to port my college Artificial Intelligence project from C++ to JS.",
+      "description": "A port of my college Artificial Intelligence project from C++ to JS.",
       "tech": [
         "AngularJS",
         "HTML",
@@ -258,8 +238,6 @@ export const demoConfig = {
     {
       "title": "O/M Studio",
       "imgSrc": "/img/om.resized.png",
-      "url": "http://omstudio.co/",
-      "urlText": "omstudio.co",
       "description": "O/M is a design studio based in San Francisco.",
       "tech": [
         "JavaScript",
@@ -273,8 +251,6 @@ export const demoConfig = {
     {
       "title": "Asylum Arts",
       "imgSrc": "/img/asylum-arts.resized.png",
-      "url": "http://www.asylum-arts.org",
-      "urlText": "www.asylum-arts.org",
       "description": "Artist fellowship from New York.",
       "tech": [
         "Yii",
@@ -310,8 +286,6 @@ export const demoConfig = {
     {
       "title": "Slide Viewer",
       "imgSrc": "/img/slide-viewer.resized.png",
-      "url": "http://ceuonline.nfshost.com/",
-      "urlText": "demo",
       "description": "Slide viewer is for delivering online tests.",
       "tech": [
         "React",
@@ -358,8 +332,6 @@ export const demoConfig = {
     {
       "title": "Ben Lee (Musician)",
       "imgSrc": "/img/ben-lee.resized.png",
-      "url": "https://web.archive.org/web/20060614224957/http://www.ben-lee.com:80/main_page.php",
-      "urlText": "archived demo",
       "description": "Musician from Australia.",
       "tech": [
         "JavaScript",
@@ -435,8 +407,6 @@ export const demoConfig = {
     {
       "title": "Machine Vision Products",
       "imgSrc": "/img/mvp.png",
-      "url": "http://www.visionpro.com",
-      "urlText": "www.visionpro.com",
       "description": "MVP builds Automated Optical Inspection machines.",
       "tech": [
         "JavaScript",
@@ -452,8 +422,6 @@ export const demoConfig = {
     {
       "title": "Machine Vision Products (CRM)",
       "imgSrc": "/img/mvp-support.png",
-      "url": "http://www.visionpro.com",
-      "urlText": "www.visionpro.com",
       "description": "A custom CRM tool for Machine Vision Products.",
       "verbose": "Built in 2006, this custom CRM tool is still in use today for customer management and bug tracking.",
       "tech": [
@@ -466,19 +434,6 @@ export const demoConfig = {
       "screenshots": [
         "/img/mvp-support.png",
         "/img/mvp-support-2.png"
-      ]
-    },
-    {
-      "title": "My public portfolio",
-      "imgSrc": "/img/frinchaboy.jpg",
-      "url": "http://frinchaboy.com/",
-      "urlText": "frinchaboy.com",
-      "description": "The site you are currently looking at was built with React.",
-      "tech": [
-        "React"
-      ],
-      "screenshots": [
-        "/img/frinchaboy.jpg"
       ]
     },
     {

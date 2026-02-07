@@ -9,6 +9,7 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
   const getDemoBoxes = (projects, size) => {
     return projects.map((config, index) => {
       let bgColor = demoConfig.colors[index % demoConfig.colors.length];
+      console.log('bgColor:', bgColor);
       const props = { demoBoxClick, config, bgColor };
       if (size) {
         props.size = size;
@@ -55,7 +56,7 @@ export const DemoGrid = ({ ready, demoBoxClick }) => {
         {latestBoxes}
       {/*</MasonryInfiniteScroller>*/}
       <br />
-      <h2>Past Work</h2>
+      <h2>Selected Past Work</h2>
       <MasonryInfiniteScroller
         sizes={sizesPast}
         loadMore={() => false}>

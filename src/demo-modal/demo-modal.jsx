@@ -4,7 +4,6 @@ import styles from "./demo-modal.module.less";
 
 export const DemoModal = ({ closeFunc, modalContent, modalTitle, bgColor }) => {
   useEffect(() => {
-
     const onKeydown = (e) => {
       if (e.key === 'Escape') {
         e.preventDefault();
@@ -42,24 +41,22 @@ export const DemoModal = ({ closeFunc, modalContent, modalTitle, bgColor }) => {
     [styles.show]: !!modalContent
   });
 
-  return <div className={className} style={{ backgroundColor: bgColor }}>
+  return <div className={className} style={{ backgroundColor: bgColor[0] }}>
     <div className={styles['modal-wrapper']}>
       <div className={styles['toolbar-wrapper']}>
         <div className={styles['toolbar']}>
           <h2>{modalTitle}</h2>
-          <a onClick={(e) => closeModal(e)} href="">
-            <button
-              type="button"
-              className={`${styles["close-icon"]} material-icons`}
-              aria-label="Close modal"
-              onClick={(e) => {
-                e.preventDefault();
-                closeFunc();
-              }}
-            >
-              close
-            </button>
-          </a>
+          <button
+            type="button"
+            className={`${styles["close-icon"]} material-icons`}
+            aria-label="Close modal"
+            onClick={(e) => {
+              e.preventDefault();
+              closeFunc();
+            }}
+          >
+            close
+          </button>
         </div>
       </div>
       <div className={styles['body']}>
