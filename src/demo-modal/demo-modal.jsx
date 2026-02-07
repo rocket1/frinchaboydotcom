@@ -41,7 +41,7 @@ export const DemoModal = ({ closeFunc, modalContent, modalTitle, bgColor }) => {
     [styles.show]: !!modalContent
   });
 
-  return <div className={className} style={{ backgroundColor: bgColor[0] }}>
+  return <div className={className} style={{ backgroundColor: bgColor?.[0] }}>
     <div className={styles['modal-wrapper']}>
       <div className={styles['toolbar-wrapper']}>
         <div className={styles['toolbar']}>
