@@ -19,8 +19,14 @@ export const Project = ({ project }) => {
     gutter: 24
   };
 
-  const screenshots = project.screenshots.map((src, index) => {
-    return <div key={index} className={styles['screenshot']}><FadeImage src={src} /></div>
+  const screenshots = project.screenshots.map((entry, index) => {
+    const entryIsObject = typeof entry === 'object';
+    const src = entryIsObject ? entry.src : entry;
+    const imgProps = { src };
+    if (entry?.maxWidth) {
+      imgProps.maxWidth = entry.maxWidth;
+    }
+    return <div key={index} className={styles['screenshot']}><FadeImage {...imgProps} /></div>
   });
 
   let content = (

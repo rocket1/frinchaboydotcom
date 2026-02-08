@@ -1,60 +1,46 @@
-import React, {Component} from 'react';
-import styles from './fade-image.module.less';
+import React, { useEffect, useState, useMemo } from "react";
+import styles from "./fade-image.module.less";
 import cx from "classnames";
 
-class FadeImage extends Component {
+const FadeImage = ({ src, maxWidth }) => {
+    const [loaded, setLoaded] = useState(false);
 
-    /**
-     *
-     * @param props
-     */
-    constructor(props) {
+    useEffect(() => {
+        if (!src) return;
 
-        super(props);
+        let cancelled = false;
 
-        this.state = {
-            loaded: false
-        };
-    }
-
-    /**
-     *
-     * @param src
-     * @private
-     */
-    _preloadImage(src) {
+        // reset fade when src changes
+        setLoaded(false);
 
         const img = new Image();
 
         img.onload = () => {
-            this.setState({
-                loaded: true
-            })
+            if (!cancelled) {
+                setLoaded(true);
+            }
         };
 
         img.src = src;
-    }
 
-    /**
-     *
-     * @returns {XML}
-     */
-    render () {
+        return () => {
+            cancelled = true;
+        };
+    }, [src]);
 
-        const src = this.props.src;
+    const className = cx(styles["fade-image"], {
+        [styles.show]: loaded,
+    });
 
-        if (!this.state.loaded) {
-           this._preloadImage(src);
-        }
+    const style = useMemo(() => {
+        if (!maxWidth) return undefined;
 
-        let className = cx(styles['fade-image'], {
-            [styles.show]: this.state.loaded
-        });
+        return {
+            maxWidth: typeof maxWidth === "number" ? `${maxWidth}px` : maxWidth,
+        };
+    }, [maxWidth]);
 
-        return (
-            <img className={className} src={src} />
-        );
-    }
-}
+    return <img className={className} src={src} style={style} />;
+};
 
 export default FadeImage;

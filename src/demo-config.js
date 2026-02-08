@@ -69,8 +69,8 @@ export const demoConfig = {
         "LESS/CSS"
       ],
       "screenshots": [
-        "/img/whisperer.resized.png",
-        "/img/whisperer-2.resized.png"
+        { src: "/img/whisperer.resized.png", maxWidth: "700px" },
+        { src: "/img/whisperer-2.resized.png", maxWidth: "700px" },
       ]
     },
     {
@@ -84,10 +84,10 @@ export const demoConfig = {
         "LESS/CSS"
       ],
       "screenshots": [
-        "/img/whisperer-v2.png",
-        "/img/whisperer-v2-2.png",
-        "/img/whisperer-v2-3.png",
-        "/img/whisperer-v2-4.png"
+        { src: "/img/whisperer-v2.png", maxWidth: "700px" },
+        { src: "/img/whisperer-v2-2.png", maxWidth: "700px" },
+        { src: "/img/whisperer-v2-3.png", maxWidth: "700px" },
+        { src: "/img/whisperer-v2-4.png", maxWidth: "700px" }
       ]
     },
     {
