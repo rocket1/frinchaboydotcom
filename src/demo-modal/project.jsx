@@ -33,7 +33,7 @@ export const Project = ({ project }) => {
     <div className="content">
       {url}
       <div className={styles['verbose']}>{project.verbose ? project.verbose : project.description}</div>
-      <div className={styles['tech']}>Built with: {tech} {project.github && <span>(<a target="_blank" href={github}>source</a>)</span>}</div>
+      <div className={styles['tech']}>Built with: {tech}</div>
       {screenshots}
     </div>
   );

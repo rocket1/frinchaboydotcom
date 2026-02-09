@@ -59,10 +59,27 @@ export const demoConfig = {
       ]
     },
     {
-      "title": "Whisperer (Google)",
+      "title": "Whisperer v2",
+      "imgSrc": "/img/whisperer-v2.png",
+      "description": "Sales tool (prototype)",
+      "verbose": "This is the second iteration of a tool is used by an internal Marketing department to manage a database of client 'stories' that are used in conjunction with CRM tools.",
+      "tech": [
+        "AngularJS",
+        "HTML",
+        "LESS/CSS"
+      ],
+      "screenshots": [
+        { src: "/img/whisperer-v2.png", maxWidth: "1200px" },
+        { src: "/img/whisperer-v2-2.png", maxWidth: "1200px" },
+        { src: "/img/whisperer-v2-3.png", maxWidth: "1200px" },
+        { src: "/img/whisperer-v2-4.png", maxWidth: "1200px" }
+      ]
+    },
+    {
+      "title": "Whisperer",
       "imgSrc": "/img/whisperer-2.resized.png",
-      "description": "Google sales tool (prototype)",
-      "verbose": "This tool is used by Google's internal Marketing department to manage a database of client 'stories' that are used in conjunction with CRM tools.",
+      "description": "Sales tool",
+      "verbose": "This tool is used by an internal Marketing department to manage a database of client 'stories' that are used in conjunction with CRM tools.",
       "tech": [
         "AngularJS",
         "HTML",
@@ -74,40 +91,23 @@ export const demoConfig = {
       ]
     },
     {
-      "title": "Whisperer v2 (Google)",
-      "imgSrc": "/img/whisperer-v2.png",
-      "description": "Google sales tool (prototype)",
-      "verbose": "This is the second iteration of a tool is used by Google's internal Marketing department to manage a database of client 'stories' that are used in conjunction with CRM tools.",
-      "tech": [
-        "AngularJS",
-        "HTML",
-        "LESS/CSS"
-      ],
-      "screenshots": [
-        { src: "/img/whisperer-v2.png", maxWidth: "700px" },
-        { src: "/img/whisperer-v2-2.png", maxWidth: "700px" },
-        { src: "/img/whisperer-v2-3.png", maxWidth: "700px" },
-        { src: "/img/whisperer-v2-4.png", maxWidth: "700px" }
-      ]
-    },
-    {
-      "title": "Abacus (Google)",
+      "title": "Abacus",
       "imgSrc": "/img/abacus.png",
-      "description": "Google sales tool (prototype)",
-      "verbose": "This tool was used by companies wishing to view metrics regarding their internal Google online tools usage (e.g. Docs, Sheets).",
+      "description": "Sales tool (prototype)",
+      "verbose": "This tool was used by companies wishing to view metrics regarding their online tools utilization.",
       "tech": [
         "AngularJS",
         "HTML",
         "LESS/CSS"
       ],
       "screenshots": [
-        "/img/abacus.png"
+        { src: "/img/abacus.png", maxWidth: "1200px" }
       ]
     },
     {
-      "title": "Diva (Google)",
+      "title": "Diva",
       "imgSrc": "/img/diva.resized.png",
-      "description": "Google retail tool (prototype).",
+      "description": "Retail tool (prototype).",
       "verbose": "This was an inventory tool for retail.  It used RFID tracking of merchandise to accurately track inventory in-store or remote.",
       "tech": [
         "AngularJS",
@@ -115,7 +115,7 @@ export const demoConfig = {
         "LESS/CSS"
       ],
       "screenshots": [
-        "/img/diva.resized.png"
+        { src: "/img/diva.resized.png", maxWidth: "800px" }
       ]
     },
     {
@@ -131,7 +131,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/mywedding-1.png"
+        { src: "/img/mywedding-1.png", maxWidth: "800px" }
       ]
     },
     {
@@ -143,10 +143,10 @@ export const demoConfig = {
         "React Native"
       ],
       "screenshots": [
-        "/img/ritual.jpg",
-        "/img/ritual-2.jpg",
-        "/img/ritual-3.png",
-        "/img/ritual-4.png"
+        { src: "/img/ritual.jpg", maxWidth: "500px" },
+        { src: "/img/ritual-2.jpg", maxWidth: "500px" },
+        { src: "/img/ritual-3.png", maxWidth: "500px" },
+        { src: "/img/ritual-4.png", maxWidth: "500px" }
       ]
     },
     {
@@ -171,7 +171,7 @@ export const demoConfig = {
         "React"
       ],
       "screenshots": [
-        "/img/norain.jpg"
+        { src: "/img/norain.jpg", maxWidth: "600px" }
       ]
     },
     {
@@ -186,7 +186,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/junkmedia.png"
+        { src: "/img/junkmedia.png", maxWidth: "800px" }
       ]
     },
     {
@@ -199,7 +199,7 @@ export const demoConfig = {
         "CSS"
       ],
       "screenshots": [
-        "/img/hilt.resized.png"
+        { src: "/img/hilt.resized.png", maxWidth: "800px" }
       ]
     },
     {
@@ -227,7 +227,7 @@ export const demoConfig = {
         "LESS/CSS"
       ],
       "screenshots": [
-        "/img/nar.png"
+        { src: "/img/nar.png", maxWidth: "800px" }
       ]
     },
     {
@@ -240,7 +240,7 @@ export const demoConfig = {
         "LESS/CSS"
       ],
       "screenshots": [
-        "/img/om.resized.png"
+        { src: "/img/om.resized.png", maxWidth: "800px" }
       ]
     },
     {
@@ -257,9 +257,9 @@ export const demoConfig = {
         "PHP"
       ],
       "screenshots": [
-        "/img/asylum-arts.resized.png",
-        "/img/asylum-arts-2.resized.png",
-        "/img/asylum-arts-4.resized.png"
+        { src: "/img/asylum-arts.resized.png", maxWidth: "800px" },
+        { src: "/img/asylum-arts-2.resized.png", maxWidth: "800px" },
+        { src: "/img/asylum-arts-4.resized.png", maxWidth: "800px" },
       ]
     },
     {
@@ -275,7 +275,7 @@ export const demoConfig = {
         "PHP"
       ],
       "screenshots": [
-        "/img/miga.resized.png"
+        { src: "/img/miga.resized.png", maxWidth: "800px" }
       ]
     },
     {
@@ -288,7 +288,7 @@ export const demoConfig = {
         "LESS/CSS"
       ],
       "screenshots": [
-        "/img/slide-viewer.resized.png"
+        { src: "/img/slide-viewer.resized.png", maxWidth: "800px" }
       ]
     },
     {
@@ -303,7 +303,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/6points.png"
+        { src: "/img/6points.png", maxWidth: "800px" }
       ]
     },
     {
@@ -319,9 +319,9 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/6points-v2.resized.png",
-        "/img/6points-v2-2.resized.png",
-        "/img/6points-v2-3.resized.png"
+        { src: "/img/6points-v2.resized.png", maxWidth: "800px" },
+        { src: "/img/6points-v2-2.resized.png", maxWidth: "800px" },
+        { src: "/img/6points-v2-3.resized.png", maxWidth: "800px" }
       ]
     },
     {
@@ -336,8 +336,8 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/ben-lee.resized.png",
-        "/img/ben-lee-2.resized.png"
+        { src: "/img/ben-lee.resized.png", maxWidth: "800px" },
+        { src: "/img/ben-lee-2.resized.png", maxWidth: "800px" }
       ]
     },
     {
@@ -352,7 +352,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/the-peels.png"
+        { src: "/img/the-peels.png", maxWidth: "800px" }
       ]
     },
     {
@@ -366,7 +366,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/combio.png"
+        { src: "/img/combio.png", maxWidth: "800px" }
       ]
     },
     {
@@ -381,7 +381,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/van-diemen.png"
+        { src: "/img/van-diemen.png", maxWidth: "800px" }
       ]
     },
     {
@@ -396,7 +396,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/fyj.png"
+        { src: "/img/fyj.png", maxWidth: "800px" }
       ]
     },
     {
@@ -411,7 +411,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/mvp.png"
+        { src: "/img/mvp.png", maxWidth: "800px" }
       ]
     },
     {
@@ -427,8 +427,8 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/mvp-support.png",
-        "/img/mvp-support-2.png"
+        { src: "/img/mvp-support.png", maxWidth: "800px" },
+        { src: "/img/mvp-support-2.png", maxWidth: "800px" }
       ]
     },
     {
@@ -443,7 +443,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/nathan-james.png"
+        { src: "/img/nathan-james.png", maxWidth: "800px" }
       ]
     },
     {
@@ -458,7 +458,7 @@ export const demoConfig = {
         "MySQL"
       ],
       "screenshots": [
-        "/img/nathan-james-v2.png"
+        { src: "/img/nathan-james-v2.png", maxWidth: "800px" }
       ]
     },
     {
@@ -471,7 +471,7 @@ export const demoConfig = {
         "CSS"
       ],
       "screenshots": [
-        "/img/lnwia.png"
+        { src: "/img/lnwia.png", maxWidth: "800px" }
       ]
     }
   ]
