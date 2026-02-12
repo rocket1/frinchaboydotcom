@@ -9,8 +9,8 @@ export const demoConfig = {
       "rgb(106,62,121)"
     ],
     [
-      "rgba(168,168,168,1.0)",
-      "rgba(119,119,119,1.0)"
+      "rgb(171,41,0)",
+      "rgb(121,24,0)"
     ],
     [
       "rgba(71,62,63,1.0)",
@@ -432,9 +432,9 @@ export const demoConfig = {
       ]
     },
     {
-      "title": "Nathan James & Ben Hernandez (Musicians)",
+      "title": "Nathan James & Ben Hernandez",
       "imgSrc": "/img/nathan-james.png",
-      "description": "Nathan James is a world-class blues musician.",
+      "description": "Nathan James and Ben Hernandez are world-class blues musicians.",
       "tech": [
         "JavaScript",
         "HTML",
@@ -447,7 +447,7 @@ export const demoConfig = {
       ]
     },
     {
-      "title": "Nathan James (Musician)",
+      "title": "Nathan James",
       "imgSrc": "/img/nathan-james-v2.png",
       "description": "Nathan James is a world-class blues musician.",
       "tech": [
@@ -471,7 +471,7 @@ export const demoConfig = {
         "CSS"
       ],
       "screenshots": [
-        { src: "/img/lnwia.png", maxWidth: "800px" }
+        { src: "/img/lnwia.png", maxWidth: "600px" }
       ]
     }
   ]
